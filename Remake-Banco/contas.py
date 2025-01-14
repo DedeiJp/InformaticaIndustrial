@@ -15,7 +15,7 @@ class Conta():
         self.titular = titular
         self.__senha = senha
         self._saldo = saldoi
-    
+
     def getSaldo(self, senha):
         """
         Método para obtenção do saldo mediante validação da senha passada como argumento
@@ -75,6 +75,18 @@ class Conta():
             print("Saldo: R$ ", self._saldo)
         else:
             print("Senha inválida")
+
+class ContaAdmin(Conta):
+    """
+    Classe Conta Admin:
+        Classe da conta com permição de adicionar e remover ususarios 
+    """
+
+    def __init__(self, numero, titular, senha, taxa = 0.002, saldoi = 9999999.99):
+
+        super().__init__(numero,titular,senha,saldoi)#super() é utilizado para se referir a uma função da classe na qual essa é derivada, no caso o construtor da classe Conta
+        self.__taxa = taxa
+        
 
 class ContaPoupanca(Conta):#Cria uma classe derivada da classe conta,mantendo todas as funções já definidas em Conta
     """
