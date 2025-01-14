@@ -11,4 +11,4 @@ c1.exibeDados(1234)
 #Utilização da classe ContaPoupanca
 cp = ContaPoupanca(2,"Maria",1234,saldoi=1200)
 cp.exibeDados(1234)
-cp.simulaRendimento(123)
+cp.simulaRendimento(12)
